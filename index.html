@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Images</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="c/main.css">
+</head>
+
+<body>
+    <figure class="object-fit-img">
+    <img src="https://picsum.photos/1080">
+    </figure>
+
+    <figure class="responsive-img">
+    <img srcset="images/image-small.webp 480w, images/image-med.webp 800w, images/image-large.webp 1200w"
+         sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw"
+         src="images/image-med.webp">
+    </figure>
+
+    <picture class="picture-img">
+        <source media="(orientation: portrait)" srcset="images/portrait-image.webp">
+        <source media="(orientation: landscape)" srcset="images/landscape-image.webp">
+        <img src="images/fallback-image.jpeg">
+    </picture>
+
+    <svg class="svg-img" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="40" stroke="white" stroke-width="2" fill="green" />
+    </svg>
+
+</body>
+</html>
