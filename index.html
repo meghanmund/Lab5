@@ -7,25 +7,47 @@
 </head>
 
 <body>
+    <div class="fit">
+    <h1>Object-Fit</h1>
     <figure class="object-fit-img">
-    <img src="https://picsum.photos/1080">
+    <img src="https://picsum.photos/800">
     </figure>
-
+    </div>
+    
+    <div class="res">
+    <h1>Resolution Swapping</h1>
     <figure class="responsive-img">
     <img srcset="images/image-small.webp 480w, images/image-med.webp 800w, images/image-large.webp 1200w"
          sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 25vw"
          src="images/image-med.webp">
     </figure>
+    </div>
 
+    <!--I wanted to experiment with a large image - potentially as responsive orientation BGs?-->
+
+    <div class="orientation">
+    <h1>Orientation Changes</h1>
     <picture class="picture-img">
-        <source media="(orientation: portrait)" srcset="images/portrait-image.webp">
-        <source media="(orientation: landscape)" srcset="images/landscape-image.webp">
+        <source media="(orientation: portrait)" 
+        srcset="images/portrait-small.webp 320w, images/portrait-medium.webp 800w, images/portrait-large.webp 1200w" 
+        sizes="(min-width: 60rem) 80vw, 
+        (min-width: 40rem) 90vw, 
+        100vw">
+        <source media="(orientation: landscape)" 
+        srcset="images/landscape-small.webp 320w, images/landscape-medium.webp 800w, images/lanscape-large.webp 1200w" 
+        sizes="(min-width: 60rem) 80vw, 
+        (min-width: 40rem) 90vw, 
+        100vw">
         <img src="images/fallback-image.jpeg">
     </picture>
+    </div>
 
-    <svg class="svg-img" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+    <div class="svg">
+    <h1>Scalable SVG</h1>
+    <svg class="svg-img" xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 100 100">
         <circle cx="50" cy="50" r="40" stroke="white" stroke-width="2" fill="green" />
     </svg>
+    </div>
 
 </body>
 </html>

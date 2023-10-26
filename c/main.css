@@ -15,20 +15,25 @@ body {
   }
 }
 
-.object-fit-img {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
+h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:white;
 }
 
-.responsive-img {
+.fit img{
+  width: 300px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.res img{
   width: 50%;
 }
 
-.picture-img {
-  width: 5%;
+picture {
+  max-width: 50%;
 }
 
 .svg-img {
-  width: 500px;
+  width: 100%;
 }
